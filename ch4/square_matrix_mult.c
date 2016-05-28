@@ -64,6 +64,6 @@ int main(){
   //declare matrices we will be multiplying
   struct Matrix *m1 = newSquareMatrix(2, d1);
   struct Matrix *m2 = newSquareMatrix(2, d2);
-  struct Matrix *m3 = squareMatMult(m1, m2);
+  struct Matrix *m3 = squareMatMult(m2, m1);
   printMatrix(m3);
 }
