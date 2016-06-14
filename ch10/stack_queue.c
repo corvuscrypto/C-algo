@@ -10,12 +10,6 @@ struct stack {
   int* _data;
 };
 
-struct queue {
-  int size;
-  int topIndex;
-  int nextIndex;
-  int* _data;
-};
 
 struct stack* Stack(){
   struct stack* ret = calloc(1, sizeof(struct stack));
@@ -54,6 +48,13 @@ struct queue* Queue(){
   ret->nextIndex = -1;
   ret->_data = calloc(PARTITION_SIZE, sizeof(int));
 }
+
+struct queue {
+  int size;
+  int topIndex;
+  int nextIndex;
+  int* _data;
+};
 
 void queue_Enqueue(struct queue *q, int x){
   //circular queue implementation with limit
