@@ -42,19 +42,19 @@ int stack_Examine(struct stack* s){
   return s->_data[s->topIndex-1];
 }
 
-struct queue* Queue(){
-  struct queue* ret = calloc(1, sizeof(struct queue));
-  ret->size = PARTITION_SIZE;
-  ret->nextIndex = -1;
-  ret->_data = calloc(PARTITION_SIZE, sizeof(int));
-}
-
 struct queue {
   int size;
   int topIndex;
   int nextIndex;
   int* _data;
 };
+
+struct queue* Queue(){
+  struct queue* ret = calloc(1, sizeof(struct queue));
+  ret->size = PARTITION_SIZE;
+  ret->nextIndex = -1;
+  ret->_data = calloc(PARTITION_SIZE, sizeof(int));
+}
 
 void queue_Enqueue(struct queue *q, int x){
   //circular queue implementation with limit
